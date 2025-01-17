@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title><%= htmlWebpackPlugin.options.title %></title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.20/dist/katex.min.css" integrity="sha384-sMefv1J1YJCHsg0mTa9YG+n/9KnJb9lGrJUUY5arg6bAL1qps/oZjmUwaHlX5Ugg" crossorigin="anonymous">
+
+		    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+		    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.20/dist/katex.min.js" integrity="sha384-i9p+YmlwbK0lT9RcfgdAo/Cikui1KeFMeV/0Fwsu+rzgsCvas6oUptNOmo29C33p" crossorigin="anonymous"></script>
+
+		    <!-- To automatically render math in text elements, include the auto-render extension: -->
+		    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.20/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+		        onload="renderMathInElement(document.body);"></script>
+				
+			<script>
+			    document.addEventListener("DOMContentLoaded", function() {
+			        renderMathInElement(document.body, {
+			          // customised options
+			          // • auto-render specific keys, e.g.:
+			          delimiters: [
+			              {left: '$$', right: '$$', display: true},
+			              {left: '$', right: '$', display: false},
+			              {left: '\\(', right: '\\)', display: false},
+			              {left: '\\[', right: '\\]', display: true}
+			          ],
+			          // • rendering keys, e.g.:
+			          throwOnError : false
+			        });
+			    });
+			</script>	
+	</head>
+	<body>
+	
+	<h1>The logistic map</h1>
+	<p>
+	The logistic map is a one-dimensional discrete time dynamical system
+	that is defined by the equation (For more information about this dynamical
+	system check out the <a href="https://en.wikipedia.org/wiki/Logistic_map">Wikipedia article</a>): 
+
+	\[
+	x_{n+1}=f(x_{n})=\lambda x_{n}(1-x_{n})
+	\]
+
+	For an initial value $0\leq x_{0}\leq 1$ this map generates a sequence
+	of values $x_{0},x_{1},...x_{n},x_{n+1},...$. The growth parameter is
+	chosen to be 
+
+	\[ 
+	0 &lt; \lambda\leq 4 
+	\]
+
+	which implies that for all $n$ the state variable will remain bounded
+	in the unit interval. Despite its simplicity this famous dynamical system
+	can exhibit an unbelievable dynamic richness. 
+
+	The logistic map has two stationary points $x^{\star}=0$ and $x^{\star}=1-\lambda^{-1}$, 
+	for those values we have $x^{\star}=f(x^{\star})$.
+	The second, non-trivial stationary point only exists for $\lambda>1$.
+	Also when $\lambda>1$ the origin is unstable and the nontrivial stationary
+	state is stable. When $\lambda>3$ the second stationary state loses
+	stability, the attractor of the dynamics is a period-2 cycle. The two points that make up this period-2 cycle, are stable fixpoints of the 
+	map $g=f\circ f$. This cycle
+	also becomes unstable eventually at $\lambda=1+\sqrt{6}\approx 3.4495$. Beyond this point the
+	attractor is a period-4 cycle (all points in it are stable fixpoints of $f\circ f\circ f\circ f$) until, again, stability is lost. This period-doubling occurs more and more as
+	we increase $\lambda$ until a critical point is reached (try identifying it)
+	and the dynamics becomes chaotic.
+	</p>
+	
+	<h2>Orbits</h2>
+	<p>
+			You can explore the dynamics of the logistic map with the tools below.
+			The first interactive figure illustrates the orbits of the logistic
+			map for two different initial conditions. You can switch on and off
+			each orbit as well as the transients to look at the structure of the
+			attractor. Observe what happens as you increase $\lambda$.
+	</p>
+			
+	<div id="panel_2"></div>
+	
+	<div class="instructions">
+	Change the initial conditions for each orbit with the <div style="color:red;display:inline">red</div>/<div style="color:green;display:inline">green</div> sliders on x-axis. Vary the growth parameter $\lambda$ using the $\lambda$-slider on the bottom. Toggle display elements by clicking menu items on the right. You can turn on/off each orbit, show the attractors and/or transients of each orbit. You can also superimpose different iterations of the map. 
+	</div>
+
+	<h2>Bifurcation Analysis</h2>
+	<p>
+			The figure below illustrates the bifurcation diagram of the logistic
+			map. For each $\lambda$ the map is iterarated for some time $N\gg1$.
+			After this initial transient period, points $x_{n}$ of the trajectory
+			with $n>N$ are recorded and depicted. This way a stable stationary state is just
+			a single point, a period-2 cycle corresponds to two points etc. This
+			way one can see the structure of period-doubling events and the onset
+			of determinstic chaos.		
+	</p>
+	<div id="panel_1"></div>
+	
+	<div class="instructions">
+		Select a region of the plot to zoom into a section of interest. Press the reset button to return to the original domain/range.
+	</div>
+
+</body>
+</html>
+

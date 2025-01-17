@@ -1,0 +1,255 @@
+svg {
+	background-color: white;
+	overflow: visible;
+	display: block;
+	margin: auto;
+	margin-top:10px;
+	image-rendering: crisp-edges;
+}
+
+h1 {
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+		font-size: 36px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: normal;
+		line-height: 26px;
+		margin-bottom:20px;
+		margin-left:50px;
+		margin-right:50px;
+		margin-top:50px;
+	}
+
+	h2 {
+		font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+		font-size: 24px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 15px;
+		margin-top:40px;
+		margin-left:50px;
+		margin-right:50px;
+
+	}
+	.author {
+		font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+		font-size: 10px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		line-height: 15px;
+		margin-top:10px;
+		margin-left:50px;
+		margin-right:50px;
+		text-align:right;
+
+	}
+
+	.instructions {
+		font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+		font-size: 14px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: bold;
+		line-height: 20px;
+				width:660px;
+				display: block;
+				margin: auto;	
+		text-align:justify;		
+
+	}
+
+p {
+		font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+		font-size: 16px;
+		font-style: normal;
+		font-variant: normal;
+		display: block;
+		margin: auto;	
+		margin-left:50px;
+		margin-right:50px;
+		margin-top:20px;
+		text-align:justify;	
+	}
+
+.equation{
+	font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+	margin: auto;	
+	border: 1px black solid;
+	text-align:center;	
+}		
+
+#redline {
+	stroke-width: 1.5px;
+	stroke: red;
+	fill: red;
+}
+
+.dot{
+	fill-opacity:0.25;
+	fill:steelblue;
+	stroke:none;
+	pointer-events: none;
+}
+	
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axislabel{
+	font: 14px sans-serif;
+}
+
+.brush .extent {
+  fill-opacity: .1;
+  stroke: darkred;
+  stroke-width:1px;
+  shape-rendering: crispEdges;
+}
+
+.fadenkreuz{
+	stroke:darkred;
+	stroke-width:1px;
+	stroke-opacity: 1;
+}
+
+.coord{
+	font: 14px sans-serif;
+	fill: darkred;
+	font-weight: bold;
+}
+
+.buttonrect{
+	stroke: black;
+	stroke-width: 1px;
+	fill:none;
+	pointer-events:all;
+}
+
+.buttontext {
+	font: 14px sans-serif;
+	fill: black;
+	font-weight: bold;
+	text-anchor: middle;
+	pointer-events:none;
+}
+
+
+.flabel {
+	font: 14px sans-serif;
+	font-weight: bold;
+}
+
+.flabel circle {
+	fill:none;
+	stroke:grey;
+	stroke-width:1px;
+}
+
+.clabel {
+	font: 14px sans-serif;
+	font-weight: bold;
+}
+
+.clabel circle {
+	fill:none;
+	stroke:grey;
+	stroke-width:1px;
+}
+
+.olabel {
+	font: 14px sans-serif;
+	font-weight: bold;
+}
+
+.olabel circle {
+	fill:none;
+	stroke:grey;
+	stroke-width:1px;
+}
+
+
+.function{
+	stroke:steelblue;
+	stroke-width:1.5px;
+	fill:none;
+}
+
+.trace {
+	stroke-opacity:1;
+	stroke-width:1.5px;
+		fill:none;
+}
+
+.transient {
+	stroke-opacity:1;
+	stroke-width:1.5px;
+		fill:none;
+}
+
+.saxis {
+  font: 10px sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.saxis .domain {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: 1;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke-linejoin:round;  
+}
+
+.saxis .halo {
+  fill: none;
+  stroke: white;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin:round;
+}
+
+.saxis text {
+  font: 10px sans-serif;
+  fill:black;
+}
+
+.saxis line,
+.saxis path {
+  fill: none;
+  stroke: #000;
+/*  shape-rendering: crispEdges;*/
+}
+
+
+.slider .handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: .5;
+  stroke-width: 1.25px;
+  cursor: crosshair;
+}
+
+.slider .tag {
+  font: 10px sans-serif;
+  fill: black;
+}
+
+.background {
+	fill:green;
+}
+

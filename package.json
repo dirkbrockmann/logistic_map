@@ -1,0 +1,41 @@
+{
+  "name": "logistic_map",
+  "title": "A Visualization of Logistic Map",
+  "version": "1.0.0",
+  "license": "CC-BY-4.0",
+  "description": "This is a one page illustration of the logistic map.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dirkbrockmann/logistic_map.git"
+  },
+  "author": "Dirk Brockmann (https://synosys.github.io)",
+  "main": "./dist/index.js",
+  "module": "src/index.js",
+  "scripts": {
+    "build": "webpack --mode production ",
+    "dev": "webpack serve --static dist/ --mode development",
+    "show": "http-server dist -o"
+  },
+  "keywords": [
+    "nonlinear dynamics",
+    "discrete maps",
+    "chaotic systems",
+    "logistic map",
+    "iterative maps"
+  ],
+  "dependencies": {
+    "d3": "^3.5.16"
+  },
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "csv-loader": "^3.0.5",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.0",
+    "http-server": "^14.1.1",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.89.0",
+    "webpack-bundle-analyzer": "^4.10.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
